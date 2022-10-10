@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:navigationdrawer/odabir1.dart';
 import 'package:navigationdrawer/odabir2.dart';
+import 'package:navigationdrawer/odabir3.dart';
 
 void main() {
   runApp(const MyApp());
@@ -26,8 +27,6 @@ class RootPage extends StatefulWidget {
 }
 
 class _RootPageState extends State<RootPage> {
-  List<Widget> pages = const [Odabir1(), Odabir2()]; // za body
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -59,6 +58,10 @@ class _RootPageState extends State<RootPage> {
                 );
               },
             ),
+            const Divider(
+              height: 1,
+              thickness: 1,
+            ),
             ListTile(
               leading: const Icon(Icons.park),
               title: const Text("Odabir 2"),
@@ -76,7 +79,7 @@ class _RootPageState extends State<RootPage> {
 
                 Navigator.of(context).push(
                   MaterialPageRoute(
-                    builder: (context) => const Odabir1(),
+                    builder: (context) => const Odabir3(),
                   ),
                 );
               },
